@@ -1431,7 +1431,7 @@ main {
 }
 
 @media (min-width: 1024px) {
-  .section-container { padding: 6rem 3rem; }
+  .section-container { padding: 4rem 3rem; }
 }
 
 .contact-intro {
