@@ -1,3 +1,4 @@
+abt
 
 // Import data from separate files
 import { specWork } from './data/specWork.js';
@@ -535,7 +536,7 @@ window.openAboutMePage = function() {
   document.querySelector('.footer').style.display = 'none';
   
   // Update URL
-  history.pushState(null, '', '#/about');
+  history.pushState(null, '', '/about');
   
   const aboutMePage = document.createElement('div');
   aboutMePage.id = 'aboutMePage';
