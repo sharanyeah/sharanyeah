@@ -1,0 +1,112 @@
+Good, this screenshot confirms it: this is not a generic overflow issue anymore.
+This is mobile Safari viewport math + safe-area + fixed elements being annoying together.
+
+Here’s the actual cause and the final fix. No prompts, no theory—just the answer.
+
+⸻
+
+What’s REALLY happening (confirmed from image)
+	1.	Your page height is still being calculated with 100vh somewhere
+	2.	On mobile Safari, 100vh ≠ visible height
+	3.	The browser UI (address bar + bottom bar) eats space
+	4.	Your footer exists, but the page thinks it has already ended
+	5.	The Replit badge is fixed, so it floats above the cutoff and exposes the bug
+
+This is a known Safari behavior. You didn’t mess up. Apple did.
+
+⸻
+
+THE FIX (this one actually works)
+
+✅ Step 1: Kill 100vh everywhere it matters
+
+Search your CSS for:
+
+height: 100vh;
+
+Replace ALL layout containers with:
+
+min-height: 100dvh;
+
+If dvh isn’t supported (older Safari), add fallback:
+
+min-height: 100vh;
+min-height: 100dvh;
+
+Important targets:
+	•	body
+	•	main
+	•	.section-container
+	•	any .page, .wrapper, .app
+
+⸻
+
+✅ Step 2: Let the document scroll fully
+
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+🚫 Do NOT use height: 100vh on body or main.
+
+⸻
+
+✅ Step 3: Account for iOS safe-area (this is the missing piece)
+
+Your footer is being hidden behind the bottom browser bar.
+
+Add this:
+
+footer {
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+}
+
+This tells iOS:
+
+“Hey, don’t hide my footer behind your UI.”
+
+Without this, Safari will always clip.
+
+⸻
+
+✅ Step 4: Keep floating elements from covering content
+
+Your Replit badge overlaps real content. Add breathing room:
+
+body {
+  padding-bottom: 4rem;
+}
+
+Or, better:
+
+#toast,
+#scrollObserver {
+  bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+
+⸻
+
+Why this fixes EVERYTHING
+
+• 100dvh = actual visible viewport
+• env(safe-area-inset-bottom) = iOS browser UI awareness
+• min-height = content can grow past viewport
+• Footer is no longer lying under the browser chrome
+
+This is the correct, production-grade solution.
+
+⸻
+
+Final conclusion
+
+Your layout is fine.
+Your typography is fine.
+Your footer design is fine.
+
+The bug was mobile Safari + 100vh + no safe-area padding.
+
+Once you switch to 100dvh and add safe-area padding, the footer will stop getting chopped—at any zoom level, on any iPhone.

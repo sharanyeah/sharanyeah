@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Sharanya - Observation Studio</title>
+  <meta name="description" content="I observe people, patterns, digital behavior, and the oddly specific things no one else notices — then turn them into writing, systems, or small experiments.">
+  <meta name="author" content="Sharanya">
+  <meta name="keywords" content="content strategy, ux writing, observation, writing, digital behavior, patterns">
+  <meta property="og:title" content="Sharanya - Observation Studio">
+  <meta property="og:description" content="An archive of experiments, questions, and work in progress.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sharanya">
+  <link rel="canonical" href="https://sharanya.studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#home" class="logo-link">
+        <span class="logo-text">Sharanya<span class="logo-dot" id="logoDot">.</span></span>
+        <span class="logo-hover-text">i see everything.</span>
+        <span class="logo-secret hidden" id="logoSecret">"i'm watching you watch me."</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+          <span class="nav-annotation-doodle" aria-hidden="true">start here</span>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+          <span class="nav-annotation-doodle" aria-hidden="true">my origin story</span>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
+          <span class="nav-annotation-doodle" aria-hidden="true">what i can do</span>
+        </li>
+        <li class="nav-item">
+          <a href="#work" class="nav-link">See My Work</a>
+          <span class="nav-annotation-doodle" aria-hidden="true">hire me</span>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+          <span class="nav-annotation-doodle" aria-hidden="true">we could talk</span>
+        </li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg class="menu-icon" id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: block;">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon hidden" id="closeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="6" y1="18" x2="18" y2="6"></line>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="mobile-nav hidden" id="mobileNav">
+      <ul class="mobile-nav-links">
+        <li class="mobile-nav-item">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <span class="mobile-doodle">start here</span>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#about" class="mobile-nav-link">About</a>
+          <span class="mobile-doodle">my origin story</span>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#skills" class="mobile-nav-link">Skills</a>
+          <span class="mobile-doodle">list them out</span>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#work" class="mobile-nav-link">See My Work</a>
+          <span class="mobile-doodle">✏️ show & tell</span>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+          <span class="mobile-doodle">✏️ reach out</span>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="section-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title animate-fade-in md:text-left text-center font-bold">
+              hi — i'm <span class="hero-name">Sharanya<svg class="name-underline" height="8" viewBox="0 0 200 8" fill="none"><path d="M0 6 Q 50 0, 100 6 T 200 6" stroke="hsl(340, 85%, 27%)" stroke-width="2" opacity="0.4"/></svg></span>
+            </h1>
+
+            <p class="hero-description animate-fade-in md:text-left text-center md:mx-0 mx-auto" style="animation-delay: 0.2s">
+              i'm a strategist and writer who decodes the patterns behind digital behavior. i reverse-engineer why copy sticks, how products convert, and the invisible mechanics of attention. this is my observation studio — where strategy meets psychology to build things that actually resonate.
+            </p>
+
+            <div class="hero-buttons animate-fade-in md:justify-start justify-center" style="animation-delay: 0.4s">
+              <a href="#work" class="btn-primary" data-testid="button-see-work">
+                see my work
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn-secondary" data-testid="button-contact">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                say hello
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-avatar animate-slide-in-right" style="animation-delay: 0.3s">
+            <div class="avatar-container photobooth-container">
+              <div class="avatar-dashed-border"></div>
+              <div class="photobooth-wrapper">
+                <img src="attached_assets/image_1765879111319.png" alt="Sharanya - photobooth strip" class="photobooth-image" />
+              </div>
+              <div class="avatar-arrow">
+                <svg width="80" height="60" viewBox="0 0 80 60" class="arrow-svg">
+                  <path d="M0 30 Q 40 10, 70 40" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                  <path d="M60 35 L70 40 L62 48" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="arrow-text">that's me!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="about-content">
+          <div class="section-header">
+            <h2 class="section-title">about</h2>
+            <span class="section-annotation">context</span>
+          </div>
+
+          <div class="about-text">
+            <p>most people read. i <span class="underline-scribble">decode</span>. i reverse-engineer why headlines work, what makes copy stick, and the exact moment attention drops. then i rebuild it better. not just products — <span class="highlight-mark">people, behavior, systems, tone</span>. the invisible mechanics everyone ignores.</p>
+
+            <p>right now: obsessed with <span class="text-maroon font-semibold">content that converts without feeling like content</span>. the sweet spot where <span class="text-maroon font-semibold">strategy meets psychology</span> meets actual human language. because the best marketing doesn't scream "buy this" — it whispers "yeah, this gets me."</p>
+
+            <p>when i'm not tearing apart landing pages or screenshot-hoarding UX copy, i'm overthinking restaurant menus (why *that* dish description?), analyzing brand voice inconsistencies, and explaining to anyone who'll listen why their CTAs aren't converting.</p>
+
+            <div class="margin-annotation margin-left-1">
+              <div class="annotation-box">"this is me trying to reverse-engineer the world."</div>
+            </div>
+            <div class="margin-annotation margin-right-1">
+              <div class="annotation-box">"take notes while reading (i always do)."</div>
+            </div>
+            <div class="margin-annotation margin-left-2">
+              <div class="annotation-box">"nothing here is final — everything's in draft mode."</div>
+            </div>
+            <div class="margin-annotation margin-right-2 floating-annotation">
+              <div class="annotation-box">"observation is a habit, not a hobby."</div>
+            </div>
+          </div>
+
+          <div class="fun-facts">
+            <div class="fun-fact">
+              <span class="fun-fact-number">47+</span>
+              <p class="fun-fact-label">error messages rewritten</p>
+            </div>
+            <div class="fun-fact">
+              <span class="fun-fact-number">&#8734;</span>
+              <p class="fun-fact-label">em dashes used</p>
+            </div>
+            <div class="fun-fact">
+              <span class="fun-fact-number">3am</span>
+              <p class="fun-fact-label">best ideas time</p>
+            </div>
+          </div>
+
+          <div class="sticky-note">
+            <p>welcome to my <span class="text-maroon font-semibold">observation studio</span> — an archive of experiments, questions, and work in progress.</p>
+          </div>
+
+          <div class="know-more-cta" onclick="openAboutMePage()" data-testid="button-know-more">
+            <span class="know-more-text">want the full story?</span>
+            <span class="know-more-link">know more about me <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+          </div>
+
+          <div class="mobile-annotations-footer">
+            <div class="annotation-box">"this is me trying to reverse-engineer the world."</div>
+            <div class="annotation-box">"observation is a habit, not a hobby."</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">skills</h2>
+          <span class="section-annotation skills-annotation">the toolkit</span>
+        </div>
+
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              writing & content
+            </h3>
+            <div class="skill-category-grid" id="writingSkills"></div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              tools & software
+            </h3>
+            <div class="skill-category-grid" id="toolsSkills"></div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              strategy & analysis
+            </h3>
+            <div class="skill-category-grid" id="strategySkills"></div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              people & behavior
+            </h3>
+            <div class="skill-category-grid" id="behaviorSkills"></div>
+          </div>
+        </div>
+
+      
+        </div>
+
+        <p class="skills-mobile-annotation">these skills talk to each other.</p>
+      </div>
+    </section>
+
+    <section id="work" class="work-section">
+      <div class="section-container">
+        <div class="work-subsection">
+          <div class="section-header">
+            <h2 class="section-title">spec work</h2>
+            <p class="section-subtitle">— ideas i tested on purpose.</p>
+          </div>
+          <div class="work-grid work-grid-preview" id="specWorkGrid"></div>
+          <div class="see-more-container">
+            <button class="see-more-btn" onclick="openSpecWorkPage()" data-testid="button-see-more-spec">
+              see all case studies
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <span class="see-more-annotation">there's more where that came from</span>
+          </div>
+        </div>
+
+        <div class="work-subsection">
+          <div class="section-header">
+            <h2 class="section-title underline-scribble">blogs</h2>
+            <p class="section-subtitle">— notes, essays, observations.</p>
+            <span class="section-annotation blogs-annotation">[ thinking aloud ]</span>
+          </div>
+          <div class="work-grid" id="blogsGrid"></div>
+          <div class="see-more-container">
+            <button class="see-more-btn" onclick="openBlogsPage()" data-testid="button-see-more-blogs">
+              see all thoughts
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <span class="see-more-annotation">there's more where that came from</span>
+          </div>
+          <p class="work-mobile-annotation">thinking aloud.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div class="section-container social-container">
+        <div class="social-header">
+          <h3 class="social-title">let's connect</h3>
+          <p class="social-subtitle">because the internet is more fun with people you actually want to talk to.</p>
+        </div>
+        
+        <div class="social-grid">
+          <div class="social-card substack-card" data-testid="card-substack">
+            <div class="social-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v2H4zM4 8h16v2H4z"/><path d="M4 12h16v8l-8-4-8 4z"/></svg>
+            </div>
+            <div class="social-card-content">
+              <h4>substack</h4>
+              <p>where i write longer thoughts — essays on behavior, observations nobody asked for, and occasional deep dives into why things work the way they do.</p>
+            </div>
+            <a href="#" class="social-card-link" data-testid="link-substack">read my writing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+          </div>
+
+          <div class="social-icons-group">
+            <a href="#" class="social-icon-card" data-testid="link-twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.4-6.4M20 4l-6.4 6.4"/></svg>
+              <span>twitter / x</span>
+              <p class="social-icon-hint">hot takes & random thoughts</p>
+            </a>
+            <a href="#" class="social-icon-card" data-testid="link-instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+              <span>instagram</span>
+              <p class="social-icon-hint">aesthetics & behind the scenes</p>
+            </a>
+            <a href="mailto:hello@sharanya.studio" class="social-icon-card" data-testid="link-email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6-10-6"/></svg>
+              <span>email</span>
+              <p class="social-icon-hint">for the serious stuff</p>
+            </a>
+            <a href="#" class="social-icon-card" data-testid="link-linkedin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>linkedin</span>
+              <p class="social-icon-hint">the professional version of me</p>
+            </a>
+          </div>
+        </div>
+        
+        <p class="social-annotation">pick your poison. i mean, communication channel.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">contact</h2>
+          <span class="section-annotation">this is your cue.</span>
+        </div>
+
+        <div class="contact-intro annotation-box">
+          <p>i love hearing from humans (and the occasional polite robot). <span class="text-maroon font-semibold">tell me about your project, your favorite observation, or just say hi.</span></p>
+        </div>
+
+        <div class="contact-fun-layout">
+          <form action="https://formspree.io/f/mjknnyye" method="POST" id="contactForm" class="contact-form-fun">
+            <div class="form-row">
+              <div class="form-group-fun">
+                <label for="name">i am called...</label>
+                <input type="text" id="name" name="name" placeholder="name goes here" required data-testid="input-name">
+              </div>
+
+              <div class="form-group-fun">
+                <label for="email">reach me at...</label>
+                <input type="email" id="email" name="_replyto" placeholder="email@address.com" required data-testid="input-email">
+              </div>
+            </div>
+
+            <div class="form-group-fun message-group">
+              <label for="message">the thing on my mind is...</label>
+              <textarea id="message" name="message" rows="6" placeholder="type your thoughts here. seriously, anything." required data-testid="input-message"></textarea>
+            </div>
+
+            <div class="form-footer-fun">
+              <button type="submit" class="btn-primary-fun" data-testid="button-submit">
+                send it into the void
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <span class="form-annotation-fun">i'll reply soon. promise.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-main">
+          <span class="footer-logo">Sharanya<span class="footer-dot">.</span></span>
+          <p class="footer-tagline" id="footerTagline">you scrolled all the way down here. impressive.</p>
+          <span class="footer-secret hidden" id="footerSecret">"you found the secret. now what?"</span>
+        </div>
+        
+        <div class="footer-col footer-currently">
+          <span class="footer-label">currently</span>
+          <p class="footer-value footer-rotating" id="footerCurrently">overthinking everything</p>
+        </div>
+        
+        <div class="footer-col footer-listening">
+          <span class="footer-label">listening to</span>
+          <p class="footer-value" id="footerListening">probably sad songs</p>
+        </div>
+        
+        <div class="footer-col footer-mood">
+          <span class="footer-label">mood</span>
+          <p class="footer-value" id="footerMood">caffeinated chaos</p>
+        </div>
+        
+        <div class="footer-col footer-reading">
+          <span class="footer-label">reading</span>
+          <p class="footer-value" id="footerReading">too many tabs at once</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span id="currentYear"></span> observation studio</p>
+        <p class="footer-status" id="footerStatus">observing your scroll behavior</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="scrollObserver" class="scroll-observer hidden">
+    <div class="observer-bubble">
+      <p id="observerText"></p>
+    </div>
+  </div>
+
+  <div id="highlightDetector" class="highlight-detector hidden">
+    <div class="highlight-bubble">
+      <p>valid highlight.</p>
+    </div>
+  </div>
+
+
+  
+
+  <div id="toast" class="toast hidden">
+    <p id="toastMessage"></p>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
