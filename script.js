@@ -1,4 +1,3 @@
-abt
 
 // Import data from separate files
 import { specWork } from './data/specWork.js';
@@ -227,32 +226,32 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Handle URL routing
 function handleRouteOnLoad() {
-  const hash = window.location.hash;
+  const hash = window.location.pathname;
   
-  if (hash === '#/spec-work') {
+  if (hash === '/spec-work') {
     setTimeout(() => openSpecWorkPage(), 100);
-  } else if (hash === '#/blogs') {
+  } else if (hash === '/blogs') {
     setTimeout(() => openBlogsPage(), 100);
-  } else if (hash.startsWith('#/spec/')) {
-    const slug = hash.replace('#/spec/', '');
+  } else if (hash.startsWith('/spec/')) {
+    const slug = hash.replace('/spec/', '');
     const item = specWork.find(w => generateSlug(w.title) === slug);
     if (item) {
       setTimeout(() => openSpecWorkDetail(item.id), 100);
     }
-  } else if (hash.startsWith('#/blog/')) {
-    const slug = hash.replace('#/blog/', '');
+  } else if (hash.startsWith('/blog/')) {
+    const slug = hash.replace('/blog/', '');
     const item = blogs.find(b => generateSlug(b.title) === slug);
     if (item) {
       setTimeout(() => openBlogDetail(item.id), 100);
     }
-  } else if (hash === '#/about') {
+  } else if (hash === '/about') {
     setTimeout(() => openAboutMePage(), 100);
   }
 }
 
 // Listen for hash changes
-window.addEventListener('hashchange', () => {
-  const hash = window.location.hash;
+window.addEventListener('popstate', () => {
+  const hash = window.location.pathname;
   
   // Close any open pages first
   const detailPage = document.getElementById('detailPage');
@@ -653,7 +652,7 @@ window.openSpecWorkPage = function() {
   document.querySelector('.footer').style.display = 'none';
   
   // Update URL
-  history.pushState(null, '', '#/spec-work');
+  history.pushState(null, '', '/spec-work');
   
   const specWorkPage = document.createElement('div');
   specWorkPage.id = 'specWorkPage';
@@ -846,7 +845,7 @@ window.openBlogsPage = function() {
   document.querySelector('.footer').style.display = 'none';
   
   // Update URL
-  history.pushState(null, '', '#/blogs');
+  history.pushState(null, '', '/blogs');
   
   const blogsPage = document.createElement('div');
   blogsPage.id = 'blogsPage';
