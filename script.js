@@ -728,7 +728,7 @@ window.openSpecWorkDetail = function(id) {
 
   // Update URL with slug
   const slug = generateSlug(item.title);
-  history.pushState(null, '', `#/spec/${slug}`);
+  history.pushState(null, '', `/spec/${slug}`);
 
   showDetailPage(item, 'spec');
 }
@@ -742,7 +742,7 @@ window.openBlogDetail = function(id) {
 
   // Update URL with slug
   const slug = generateSlug(item.title);
-  history.pushState(null, '', `#/blog/${slug}`);
+  history.pushState(null, '', `/blog/${slug}`);
 
   showDetailPage(item, 'blog');
 }
